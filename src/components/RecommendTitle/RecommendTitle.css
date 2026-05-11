@@ -1,0 +1,37 @@
+.recommendtitle {
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; 
+}
+
+.chip {
+  background: #e5e5e5;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chip:hover {
+  background: #d4d4d4;
+}
+
+@media (max-width: 768px){
+  .recommendtitle{
+    display: none;
+  }
+}
+
+@media (max-width: 340px){
+  .recommendtitle{
+    display: none;
+  }
+}

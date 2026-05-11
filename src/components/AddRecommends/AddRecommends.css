@@ -1,0 +1,139 @@
+.addrecommends {
+  padding: 40px 80px;
+  font-family: sans-serif;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+  
+.addrecommends-title {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.addrecommends-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.addrecommends-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.addrecommends-item-5 {
+  margin-top: -118px;
+}
+
+.addrecommends-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.addrecommends-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.addrecommends-card-1,
+.addrecommends-card-3 {
+  height: 478px;
+}
+
+.addrecommends-card-2 {
+  height: 360px;
+}
+
+.addrecommends-card-4,
+.addrecommends-card-6 {
+  height: 355px;
+}
+
+.addrecommends-card-5 {
+  height: 478px;
+}
+
+
+.addrecommends-arrow {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* планшет */
+@media (max-width: 992px) {
+  .addrecommends {
+    padding: 0 24px;
+    margin-top: 60px;
+  }
+  .addrecommends-title {
+    font-size: 20px;
+  }
+  .addrecommends-card-1, .addrecommends-card-3 { height: 340px; }
+  .addrecommends-card-2 { height: 260px; }
+  .addrecommends-card-4, .addrecommends-card-6 { height: 255px; }
+  .addrecommends-card-5 { height: 340px; }
+  .addrecommends-item-5 { margin-top: -85px; }
+}
+
+/* телефон — 1 колонка */
+@media (max-width: 768px) {
+  .addrecommends {
+    padding: 0 16px;
+    margin-top: 48px;
+  }
+  .addrecommends-title {
+    font-size: 18px;
+  }
+  .addrecommends-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .addrecommends-item-5 {
+    margin-top: 0;
+  }
+  .addrecommends-card-1,
+  .addrecommends-card-2,
+  .addrecommends-card-3,
+  .addrecommends-card-4,
+  .addrecommends-card-5,
+  .addrecommends-card-6 {
+    height: 260px;
+  }
+}
+
+/* маленький телефон */
+@media (max-width: 480px) {
+  .addrecommends {
+    padding: 0 12px;
+    margin-top: 36px;
+  }
+  .addrecommends-title {
+    font-size: 16px;
+  }
+  .addrecommends-card-1,
+  .addrecommends-card-2,
+  .addrecommends-card-3,
+  .addrecommends-card-4,
+  .addrecommends-card-5,
+  .addrecommends-card-6 {
+    height: 220px;
+  }
+}

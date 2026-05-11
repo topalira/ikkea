@@ -1,0 +1,96 @@
+.footer {
+  /* width: 1920px; */
+  height: 677px;
+  position: relative;
+  background: #F2F2F2;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 80px;
+}
+
+.col {
+  position: absolute;
+  top: 67px;
+  width: 200px;
+}
+
+.col1 { left: 200px; }
+.col2 { left: 500px; }
+.col3 { left: 800px; }
+.col4 { left: 1100px; }
+
+.col h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.col p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+
+.socials {
+  position: absolute;
+  left: 200px;
+  top: 510px;
+}
+
+.socials span {
+  margin-right: 15px;
+}
+
+/* платежи */
+.payments {
+  position: absolute;
+  left: 400px;
+  top: 510px;
+}
+
+.payments span {
+  margin-right: 20px;
+}
+
+/* кнопка */
+.scroll-top {
+  position: absolute;
+  left: 140px;
+  top: 610px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* низ */
+.bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 220px;
+  right: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.socials svg {
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s;
+}
+
+.socials svg:hover {
+  color: #666;
+}
+
+

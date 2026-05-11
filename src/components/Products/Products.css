@@ -1,0 +1,144 @@
+.products_categorie{
+  padding: 40px 80px;
+  font-family: sans-serif;
+  margin-left: 8%;
+  margin-right: 8%;
+  display: flex;
+  flex-direction: column;
+}
+
+.products__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.products__p {
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.products__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.products__track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.products__track::-webkit-scrollbar {
+  display: none;
+}
+
+.products__card {
+  flex: 0 0 200px;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+
+.products__label {
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.products__arrow {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__arrow img {
+  width: 38px;
+  height: 38px;
+}
+
+.products__arrow.left {
+  left: -20px;
+}
+
+.products__arrow {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .products__categorie {
+    padding: 20px;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  .products__card {
+    flex: 0 0 140px;
+    height: 200px;
+  }
+
+  .products__arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .products__title {
+    text-align: center;
+  }
+
+  .products__p {
+    text-align: center;
+  }
+
+  .products__arrow.right {
+    display: none;
+  }
+}
+
+@media (max-width: 340px) {
+  .products__categorie {
+    padding: 20px;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  .products__card {
+    flex: 0 0 140px;
+    height: 200px;
+  }
+
+  .products__label {
+    text-align: center;
+  }
+
+  .products__arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .products__p {
+    text-align: center;
+  }
+
+  .products__arrow.right {
+    display: none;
+  }
+}

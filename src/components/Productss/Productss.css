@@ -1,0 +1,115 @@
+.productss {
+  padding: 40px 80px;
+  font-family: sans-serif;
+  margin-left: 8%;
+  margin-right: 8%;
+  text-align: left;
+  }
+  
+  .productss-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    text-align: left;
+  }
+  
+  .productss-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 60px;
+    row-gap: 50px;
+  }
+  
+  .productss-card { width: 100%; }
+  
+  .productss-img-wrap {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .productss-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .productss-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+  
+  .productss-desc {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .productss-price {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 1024px) {
+    .productss {
+      padding: 0 48px;
+    }
+    .productss-grid {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 36px;
+      row-gap: 40px;
+    }
+    .productss-img-wrap {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .productss {
+      padding: 0 28px;
+      margin-top: 56px;
+    }
+    .productss-title {
+      font-size: 20px;
+      margin-bottom: 36px;
+    }
+    .productss-grid {
+      column-gap: 20px;
+      row-gap: 32px;
+    }
+    .productss-img-wrap {
+      height: 170px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .productss {
+      padding: 0 16px;
+      margin-top: 36px;
+    }
+    .productss-grid {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 12px;
+      row-gap: 24px;
+    }
+    .productss-img-wrap {
+      height: 130px;
+    }
+    .productss-name {
+      font-size: 12px;
+      margin-top: 12px;
+    }
+    .productss-price {
+      font-size: 15px;
+    }
+  }

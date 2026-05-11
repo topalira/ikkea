@@ -1,0 +1,139 @@
+.ideas {
+  padding: 40px 80px;
+  font-family: sans-serif;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.ideas-title {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.ideas-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ideas-item-5 {
+  margin-top: -118px;
+}
+
+.ideas-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.ideas-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ideas-card-1,
+.ideas-card-3 {
+  height: 478px;
+}
+
+.ideas-card-2 {
+  height: 360px;
+}
+
+.ideas-card-4,
+.ideas-card-6 {
+  height: 355px;
+}
+
+.ideas-card-5 {
+  height: 478px;
+}
+
+.ideas-arrow {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* планшет */
+@media (max-width: 992px) {
+  .ideas {
+    padding: 0 24px;
+    margin-top: 60px;
+  }
+  .ideas-title {
+    font-size: 20px;
+  }
+  .ideas-card-1, .ideas-card-3 { height: 340px; }
+  .ideas-card-2 { height: 260px; }
+  .ideas-card-4, .ideas-card-6 { height: 255px; }
+  .ideas-card-5 { height: 340px; }
+  .ideas-item-5 { margin-top: -85px; }
+}
+
+/* телефон — 1 колонка */
+@media (max-width: 768px) {
+  .ideas {
+    padding: 0 16px;
+    margin-top: 48px;
+  }
+  .ideas-title {
+    font-size: 18px;
+  }
+  .ideas-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .ideas-item-5 {
+    margin-top: 0;
+  }
+  .ideas-card-1,
+  .ideas-card-2,
+  .ideas-card-3,
+  .ideas-card-4,
+  .ideas-card-5,
+  .ideas-card-6 {
+    height: 260px;
+  }
+}
+
+/* маленький телефон */
+@media (max-width: 480px) {
+  .ideas {
+    padding: 0 12px;
+    margin-top: 36px;
+  }
+  .ideas-title {
+    font-size: 16px;
+  }
+  .ideas-card-1,
+  .ideas-card-2,
+  .ideas-card-3,
+  .ideas-card-4,
+  .ideas-card-5,
+  .ideas-card-6 {
+    height: 220px;
+  }
+}

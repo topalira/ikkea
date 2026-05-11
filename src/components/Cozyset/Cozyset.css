@@ -1,0 +1,68 @@
+.cozyset {
+  padding: 40px 20px;
+  font-family: sans-serif;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+.cozyset__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.cozyset__container {
+  display: flex;
+  gap: 20px;
+}
+
+.cozyset__item {
+  flex: 1;
+}
+
+.cozyset__image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.cozyset__label {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .cozyset__container {
+    flex-direction: column;
+  }
+
+  .cozyset__label {
+    max-height: 40px;
+    overflow: hidden;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .cozyset__image {
+    height: 180px;
+  }
+
+  .cozyset__title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 340px) {
+  .cozyset__container {
+    flex-direction: column;
+  }
+
+  .cozyset__title {
+    text-align: center;
+  }
+
+  .cozyset__image {
+    height: 100px;
+  }
+}
