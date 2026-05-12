@@ -95,6 +95,10 @@
     height: 200px;
   }
 
+  .products__label {
+    font-size: 10px;
+  }
+
   .products__arrow {
     width: 36px;
     height: 36px;

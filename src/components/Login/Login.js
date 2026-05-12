@@ -72,11 +72,11 @@ const Login = () => {
             <span className="info-icon">i</span>
           </div>
 
-          <button type="submit" className="btn-primary">ПРОДОВЖИТИ</button>
+          <button type="submit" className="butn-primary">ПРОДОВЖИТИ</button>
 
           <div className="register-section">
             <p>У вас ще немає облікового запису? Створіть його:</p>
-            <button type="button" className="btn-secondary">СТВОРИТИ АККАУНТ</button>
+            <button type="button" className="butn-secondary">СТВОРИТИ АККАУНТ</button>
           </div>
         </form>
       </div>

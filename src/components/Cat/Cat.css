@@ -42,6 +42,7 @@
   @media (max-width: 1024px) {
     .cat {
       padding: 0 32px;
+        text-align: center;
     }
     .cat-grid {
       grid-template-columns: repeat(4, 1fr);
@@ -54,6 +55,7 @@
     .cat {
       padding: 0 20px;
       margin-top: 56px;
+        text-align: center;
     }
     .cat h2 {
       margin-left: 0;
@@ -76,6 +78,7 @@
     .cat {
       padding: 0 12px;
       margin-top: 36px;
+        text-align: center;
     }
     .cat-grid {
       grid-template-columns: repeat(3, 1fr);
