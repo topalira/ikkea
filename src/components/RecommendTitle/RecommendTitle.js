@@ -9,7 +9,7 @@ const data = [
   "ЛАГІДНИЙ ПРОСТІР",
   "РОДИННИЙ ЗАТИШОК",
   "ЖИВА ОСЕЛЯ",
-  "АТМОСФЕРА ЗАТИШКУ",
+  "АТМОСФЕРА",
 ];
 
 export default function RecommendTitle() {

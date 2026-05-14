@@ -1,6 +1,5 @@
 .products_categorie{
   padding: 40px 80px;
-  font-family: sans-serif;
   margin-left: 8%;
   margin-right: 8%;
   display: flex;
@@ -15,7 +14,7 @@
 
 .products__p {
   font-size: 14px;
-  font-family: sans-serif;
+
 }
 
 .products__container {

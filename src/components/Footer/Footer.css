@@ -1,18 +1,17 @@
 .footer {
-  /* width: 1920px; */
-  height: 677px;
+  height: 680px;
   position: relative;
   background: #F2F2F2;
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 80px;
+  margin-top: 100px;
+  
 }
 
+/* колонки */
 .col {
   position: absolute;
   top: 67px;
   width: 200px;
 }
-
 .col1 { left: 200px; }
 .col2 { left: 500px; }
 .col3 { left: 800px; }
@@ -23,33 +22,45 @@
   font-weight: 500;
   margin-bottom: 15px;
 }
-
 .col p {
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 8px;
 }
 
-
+/* десктоп: соцсети и платежи */
 .socials {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.socials svg {
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s;
+}
+.socials svg:hover { color: #666; }
+
+.desktop-only.socials {
   position: absolute;
   left: 200px;
   top: 510px;
 }
-
-.socials span {
-  margin-right: 15px;
-}
-
-/* платежи */
-.payments {
+.desktop-only.payments {
   position: absolute;
   left: 400px;
   top: 510px;
 }
 
-.payments span {
-  margin-right: 20px;
+.payments {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.payments svg {
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /* кнопка */
@@ -64,7 +75,9 @@
   color: white;
   border: none;
   cursor: pointer;
+  font-size: 18px;
 }
+
 
 /* низ */
 .bottom {
@@ -76,21 +89,67 @@
   justify-content: space-between;
 }
 
-.socials {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+/* мобайл блок скрыт на десктопе */
+.mobile-icons {
+  display: none;
 }
 
-.socials svg {
-  font-size: 20px;
-  cursor: pointer;
-  color: black;
-  transition: 0.3s;
+/* ========================
+   МОБАЙЛ
+======================== */
+@media (max-width: 900px) {
+  .footer {
+    height: auto;
+    padding: 32px 20px 30px;
+    position: relative;
+  }
+
+  /* скрываем весь текст */
+  .col {
+    display: none !important;
+  }
+
+  .bottom {
+    display: none !important;
+  }
+
+  /* скрываем десктопные абсолютные иконки */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* скрываем десктопную кнопку */
+  .scroll-top {
+    display: none !important;
+  }
+
+  /* показываем мобайл иконки */
+  .mobile-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px 0;
+  }
+
+  .mobile-icons .socials {
+    position: static;
+    display: flex;
+    gap: 20px;
+  }
+
+  .mobile-icons .socials svg {
+    font-size: 28px;
+  }
+
+  .mobile-icons .payments {
+    position: static;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .mobile-icons .payments svg {
+    font-size: 30px;
+  }
 }
-
-.socials svg:hover {
-  color: #666;
-}
-
-

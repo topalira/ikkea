@@ -1,6 +1,5 @@
 .ideas {
   padding: 40px 80px;
-  font-family: sans-serif;
   margin-left: 8%;
   margin-right: 8%;
 }
@@ -8,7 +7,6 @@
 .ideas-title {
   margin-bottom: 20px;
   padding: 10px 0;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 24px;
   text-transform: uppercase;
