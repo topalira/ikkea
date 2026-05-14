@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 import "./Recommendation.css";
+import arr from './arrow.png'
 
 function Recommendation() {
   const recommendations = [
     { id: 1, image: "/path-to-img1.jpg", title: "ГАРМОНІЯ СКАНДІ" },
-    { id: 2, image: "/path-to-img2.jpg", title: "ТЕРАКОТОВИЙ ЗАТИШОК" },
-    { id: 3, image: "/path-to-img3.jpg", title: "НАТХНЕННЯ ПРИРОДИ" },
+    { id: 2, image: "/path-to-img2.jpg", title: "ЗАТИШОК" },
+    { id: 3, image: "/path-to-img3.jpg", title: "НАТХНЕННЯ" },
     { id: 4, image: "/path-to-img4.jpg", title: "МАГІЯ СВІТЛА" },
     { id: 5, image: "/path-to-img5.jpg", title: "МІСЬКИЙ СПОКІЙ" },
     { id: 6, image: "/path-to-img6.jpg", title: "РОДИННА ВЕЧЕРЯ" },
@@ -23,9 +24,9 @@ function Recommendation() {
     { id: 9, image: "/path9.jpg", title: "ЗЕЛЕНА ГАРМОНІЯ" },
     { id: 10, image: "/path10.jpg", title: "БОХО МОТИВИ" },
     { id: 11, image: "/path11.jpg", title: "ЛАКОНІЧНА ВАЗА" },
-    { id: 12, image: "/path12.jpg", title: "ГЕОМЕТРІЯ ДЕРЕВА" },
+    { id: 12, image: "/path12.jpg", title: "ГЕОМЕТРІЯ" },
     { id: 13, image: "/path13.jpg", title: "М'ЯКІ ОБІЙМИ" },
-    { id: 14, image: "/path14.jpg", title: "КНИЖКОВА ПОЛИЦЯ" },
+    { id: 14, image: "/path14.jpg", title: "ПОЛИЦЯ" },
     { id: 17, image: "/path17.jpg", title: "ДЕТАЛІ ЗАТИШКУ" },
     { id: 18, image: "/path18.jpg", title: "ЕНЕРГІЯ СОНЦЯ" },
     { id: 19, image: "/path19.jpg", title: "ЕСТЕТИКА ФОРМ" },
@@ -57,7 +58,7 @@ function Recommendation() {
             className="recommendation_arrow left"
             onClick={() => scroll("left")}
           >
-            <img src="/arrow-left.png" alt="left" />
+            <img src="arrow-left.png" alt="left" />
           </button>
         )}
 
@@ -77,7 +78,8 @@ function Recommendation() {
           className="recommendation_arrow right"
           onClick={() => scroll("right")}
         >
-          <img src="/arrow.png" alt="right" />
+          {/* <img src="arrow.png" alt="right" /> */}
+          <div>&#62;</div>
         </button>
       </div>
     );

@@ -5,3 +5,39 @@
 }
 
 
+.recommendation_arrow {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommendation_arrow img {
+  width: 38px;
+  height: 38px;
+}
+
+.recommendation_arrow.left {
+  left: -20px;
+}
+
+.recommendation_arrow {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .recommendation_arrow.right {
+    display: none;
+  }
+}
+
+@media (max-width: 340px) {
+  .recommendation_arrow.right {
+    display: none;
+  }
+}
