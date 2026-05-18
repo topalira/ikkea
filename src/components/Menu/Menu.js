@@ -12,7 +12,7 @@ export function Menu(props) {
         <Link to="/" onClick={props.onClose}>Головна</Link>
         <Link to="/product" onClick={props.onClose}>Товари</Link>
         <Link to="/rooms" onClick={props.onClose}>Кімнати</Link>
-        <Link to="ideas" onClick={props.onClose}>Ідеї</Link>
+        <Link to="/ideaspage" onClick={props.onClose}>Ідеї</Link>
         <Link to="/design" onClick={props.onClose}>Дизайн</Link>
       </nav>
     </div>

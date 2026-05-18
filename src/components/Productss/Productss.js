@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import "./Productss.css";
 
 const productss = [
@@ -22,23 +23,50 @@ const productss = [
   {
     img: "/product1.jpg",
     name: "СВІТИЛЬНИК SOFT",
-    desc: "М’яке тепле світло для затишної атмосфери",
+    desc: "М'яке тепле світло для затишної атмосфери",
     price: "39$",
   },
 ];
 
 function Productss() {
+  const sliderRef = useRef(null);
+  const drag = useRef({ active: false, startX: 0, scrollLeft: 0 });
+
+  const onMouseDown = (e) => {
+    drag.current.active = true;
+    drag.current.startX = e.pageX - sliderRef.current.offsetLeft;
+    drag.current.scrollLeft = sliderRef.current.scrollLeft;
+  };
+
+  const onMouseMove = (e) => {
+    if (!drag.current.active) return;
+    e.preventDefault();
+    const x = e.pageX - sliderRef.current.offsetLeft;
+    const walk = x - drag.current.startX;
+    sliderRef.current.scrollLeft = drag.current.scrollLeft - walk;
+  };
+
+  const stopDrag = () => {
+    drag.current.active = false;
+  };
+
   return (
     <section className="productss">
       <h2 className="productss-title">ТОВАРИ</h2>
 
-      <div className="productss-grid">
+      <div
+        className="productss-slider"
+        ref={sliderRef}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMouseMove}
+        onMouseUp={stopDrag}
+        onMouseLeave={stopDrag}
+      >
         {productss.map((item, index) => (
           <div className="productss-card" key={index}>
             <div className="productss-img-wrap">
-              <img src={item.img} alt={item.name} />
+              <img src={item.img} alt={item.name} draggable={false} />
             </div>
-
             <p className="productss-name">{item.name}</p>
             <p className="productss-desc">{item.desc}</p>
             <p className="productss-price">{item.price}</p>

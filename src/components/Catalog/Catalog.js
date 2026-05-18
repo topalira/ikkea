@@ -11,7 +11,7 @@ function Catalog() {
   ];
 
   return (
-    <section className="catalog" id=''>
+    <section className="catalog" id='catalog'>
       <h2>КАТАЛОГ</h2>
 
       <div className="catalog-grid">

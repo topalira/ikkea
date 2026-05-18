@@ -1,0 +1,139 @@
+.many {
+  margin-left: 12%;
+  margin-right: 12%;
+  padding-top: 70px;
+}
+
+.many__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.many__columns {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.column.desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.column.tablet {
+  display: none;
+}
+
+.many__item {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.many__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.many__arrow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+.many-card-1  { height: 462px; }
+.many-card-2  { height: 298px; }
+.many-card-3  { height: 652px; }
+.many-card-4  { height: 596px; }
+.many-card-5  { height: 463px; }
+.many-card-6  { height: 550px; }
+.many-card-7  { height: 462px; }
+.many-card-8  { height: 596px; }
+.many-card-9  { height: 246px; }
+.many-card-10 { height: 678px; }
+.many-card-11 { height: 477px; }
+.many-card-12 { height: 750px; }
+.many-card-13 { height: 345px; }
+@media (max-width: 992px) {
+  .many {
+    padding: 0 32px;
+    margin-top: 40px;
+  }
+  .column.desktop {
+    display: none;
+  }
+
+  .column.tablet {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 12px);
+    gap: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .many {
+    padding: 0 16px;
+    margin-top: 40px;
+  }
+  .many__columns {
+    flex-direction: column;
+  }
+
+  .column.tablet {
+    width: 100%;
+  }
+  .many__title {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .many-card-1,
+  .many-card-2,
+  .many-card-3,
+  .many-card-4,
+  .many-card-5,
+  .many-card-6,
+  .many-card-7,
+  .many-card-8,
+  .many-card-9,
+  .many-card-10,
+  .many-card-11,
+  .many-card-12,
+  .many-card-13 {
+    height: 260px;
+  }
+}
+@media (max-width: 480px) {
+  .many {
+    padding: 0 12px;
+    margin-top: 36px;
+  }
+  .many-card-1,
+  .many-card-2,
+  .many-card-3,
+  .many-card-4,
+  .many-card-5,
+  .many-card-6,
+  .many-card-7,
+  .many-card-8,
+  .many-card-9,
+  .many-card-10,
+  .many-card-11,
+  .many-card-12,
+  .many-card-13 {
+    height: 220px;
+  }
+}

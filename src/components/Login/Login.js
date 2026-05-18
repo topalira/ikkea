@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -17,7 +18,7 @@ const Login = () => {
   };
   useEffect(() => {
     const header = document.querySelector('header');
-    const footer = document.querySelector('footer');
+    const footer = document.querySelector('.footer');
 
     if (header) header.style.display = 'none';
     if (footer) footer.style.display = 'none';
@@ -76,7 +77,8 @@ const Login = () => {
 
           <div className="register-section">
             <p>У вас ще немає облікового запису? Створіть його:</p>
-            <button type="button" className="butn-secondary">СТВОРИТИ АККАУНТ</button>
+            {/* <button type="button" className="butn-secondary">СТВОРИТИ АККАУНТ</button> */}
+            <Link to='/signup'><div className='butn-secondary'>СТВОРИТИ АККАУНТ</div></Link>
           </div>
         </form>
       </div>

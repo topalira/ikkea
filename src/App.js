@@ -19,6 +19,7 @@ import DesignPage from './components/DesignPage/DesignPage';
 import Signup from './components/Signup/Signup';
 import CartPage from './components/CartPage/CartPage';
 import LikePage from './components/LikePage/LikePage';
+import IdeasPage from './components/IdeasPage/IdeasPage';
 
 function AppContent() {
   return (
@@ -35,6 +36,7 @@ function AppContent() {
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/basket' element={<CartPage/>}/>
           <Route path='/like' element={<LikePage/>}/>
+          <Route path='/ideaspage' element={<IdeasPage/>}/>
         </Routes>
       </main>
 

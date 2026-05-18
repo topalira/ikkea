@@ -23,22 +23,37 @@ function Information() {
 
         <div className="information-card">
           <div className="information-card-content">
-            <h3>ПРО ДИЗАЙН</h3>
+            <h3>ВАЖЛИВА ІНФОРМАЦІЯ</h3>
             <p>
               Ми віримо, що гарний дизайн — це не розкіш, а щоденний комфорт.
-              Світлі кольори, натуральні текстури та прості форми створюють простір,
-              у якому легко жити, працювати та відпочивати.
+              Світлі кольори, натуральні текстури та прості форми створюють
+              простір, у якому легко жити, працювати та відпочивати.
             </p>
           </div>
         </div>
       </div>
       <div className="small-list">
-        {smallInformation.map((item) => (
-          <div key={item.id} className="small-item">
-            <img src={item.image} alt={item.title} />
-            <p>{item.title}</p>
-          </div>
-        ))}
+        {smallInformation.map((item, index) => {
+          const isLast = index === smallInformation.length - 1;
+
+          if (isLast) {
+            return (
+              <div key={item.id} className="small-center">
+                <div className="small-item">
+                  <img src={item.image} alt={item.title} />
+                  <p>{item.title}</p>
+                </div>
+              </div>
+            );
+          }
+
+          return (
+            <div key={item.id} className="small-item">
+              <img src={item.image} alt={item.title} />
+              <p>{item.title}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -11,7 +11,6 @@ import Sections from '../Sections/Sections'
 export function ProductsPage() {
   return (
     <div className="ProductsPage" >
-      {/* Твои компоненты */}
       <Products />
       <Productset />
       <Novelty />

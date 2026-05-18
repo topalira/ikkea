@@ -5,10 +5,10 @@ function Rooms() {
   const bigRooms = [
     { id: 1, image: "/rooms1.jpg", title: "ВІТАЛЬНЯ ЗАТИШКУ" },
     { id: 2, image: "/rooms2.jpg", title: "СПАЛЬНЯ СПОКОЮ" },
-    { id: 3, image: "/rooms3.jpg", title: "КУХНЯ МІНІМАЛІЗМ" },
+    { id: 3, image: "/rooms3.jpg", title: "КУХНЯ МІНІМАЛІЗМУ" },
     { id: 4, image: "/rooms4.jpg", title: "РОБОЧИЙ ПРОСТІР" },
     { id: 5, image: "/rooms5.jpg", title: "ДИТЯЧА ГАРМОНІЯ" },
-    { id: 6, image: "/rooms6.jpg", title: "СВІТЛА ВАННА " },
+    { id: 6, image: "/rooms6.jpg", title: "СВІТЛА ВАННА КІМНАТА" },
     { id: 7, image: "/rooms7.jpg", title: "ЗОНА ВІДПОЧИНКУ" },
   ];
 
@@ -30,10 +30,8 @@ function Rooms() {
       const container = trackRef.current;
       if (!container) return;
 
-      const scrollAmount = 300;
-
       container.scrollBy({
-        left: direction === "right" ? scrollAmount : -scrollAmount,
+        left: direction === "right" ? 300 : -300,
         behavior: "smooth",
       });
 
@@ -74,13 +72,32 @@ function Rooms() {
       <h2 className="rooms__title">кімнати</h2>
 
       <Track data={bigRooms} />
-      <div className="small-list">
-        {smallRooms.map((item) => (
-          <div key={item.id} className="small-item">
-            <img src={item.image} alt={item.title} />
-            <p>{item.title}</p>
-          </div>
-        ))}
+      <div className="smallRoom-list">
+        {smallRooms.map((item, index) => {
+          const isLast = index === smallRooms.length - 1;
+
+          const card = (
+            <div className="smallRoom-item">
+              <img src={item.image} alt={item.title} />
+              <p>{item.title}</p>
+            </div>
+          );
+
+          if (isLast) {
+            return (
+              <div key={item.id} className="smallRoom-center">
+                {card}
+              </div>
+            );
+          }
+
+          return (
+            <div key={item.id} className="smallRoom-item">
+              <img src={item.image} alt={item.title} />
+              <p>{item.title}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
